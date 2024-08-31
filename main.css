@@ -1,0 +1,527 @@
+/*Root i can refer back to this throughout the entire css page, i just put palette colours here */
+:root {
+  --light-cream: #fff7f1;
+  --light-brown: #be8f71;
+  --coffee-brown: #764a33;
+  --darker-brown: #55301c;
+  --long-black: #33190b;
+  --cream-accent: #fedcce;
+}
+/* "*" refers too all elements, so in this case, no padding,marging and everything fits their container fits to the content nicer*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /*	Defines how the width and height of an element are calculated: should they include padding and borders, or not*/
+}
+
+/*classes use .class, ids use #s, elements dont need anything
+*/
+
+/*HEADER CONTENT*/
+.header-container {
+  background-image: url("assets/img/banner\ bg.png");
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex; /* direct children of the contain become 'flex items' allowing you to move the asset around */
+  align-items: center;
+  justify-content: center; /* i really really really really hate how to make elements 
+  go into the centre of a container, u need 2 different css prompts, very unintuitive 
+  but at least i understand this now */
+  height: 30vh; /* i saw ebgames use their variables as 2em and i just dont understand it, viewpoint is so much more intutive */
+  padding: 0px 0;
+  position: relative;
+}
+
+/*automatically scales the image inside of the header container so its responsive to header container changes*/
+.header-image {
+  max-width: 100%; 
+  max-height: 100%;
+  height: auto;
+  width: auto; 
+  object-fit: contain; /*resizes it to fit the container*/
+}
+
+/* MAKES HEADER CONTAINER RESPONSIVE TO DIFFERENT SCREEN WIDTHS - *RESPONSIVE DELIEVERABLE ACHIEVED */
+@media (max-width: 768px) {
+  .header-container {
+      height: 30vh;
+      background-size: cover;
+  }
+}
+
+/* google device toggle toolbar is pissing me off, adjusts for extra small screens */
+@media (max-width: 480px) {
+  .header-container {
+      height: 30vh;
+  }
+  .header-image {
+      max-width: 100%; 
+      max-height: 100%;
+  }
+  .brand-logo {
+      max-width: 60px;
+      max-height: 45px;
+  }
+}
+
+/*BRANDS CONTENT*/
+/* brands section background and height */
+.brands-section {  
+  padding: 0px 0;
+  background-color: #2b1a1a; 
+}
+
+/* container box that all the brands sit inside and determines how they are arranged; flex makes it all horiztonal */
+.brands-container {
+  display: flex; 
+  justify-content: space-around; /* evenly spaces the brands along the length of the container */
+  align-items: center;
+  max-width: 1200px; /* brands cant go beyond 1200px, makes it look good */
+  margin: 0 auto; /* centres the container box */ 
+  flex-wrap: wrap; /* combos with display flex, this just makes it so on ultra small screen, the logos are stacking on top of eachother */
+}
+
+.brand-wrapper {
+  width: 80px; 
+  height: 80px; /* how big each logo can get, all logos are same size */
+  overflow: hidden; /* hides the overflow, making logo pngs easier to display */
+  display: flex;
+  justify-content: center; 
+  align-items: center; /* centres the image within the brand wrapper */
+}
+
+/* calling the brand logo class to make changes to all logos */
+.brand-logo {
+  width: 100%;
+  height: auto; /*auto adjusts the aspect ratio when width changes */
+  object-fit: cover; /* makes the image cover the whole brand wrapper*/
+}
+
+/* makes the brand container responsive to mobile devices */
+@media (max-width: 480px) {
+  .brand-wrapper {
+      width: 60px; 
+      height: 60px; 
+  }
+
+  .brand-logo {
+      width: 100%; 
+      height: auto; 
+  }
+}
+/* seems cool, could be used to link to different brands of coffee machines, right now its just a bad affordance :sadface: INTERACTIVE DELIVERABLE*/
+.brand-logo:hover {
+  opacity: 0.5; 
+  cursor: pointer;
+}
+
+/* MAIN CONTENT */
+.main-content-section {
+  padding: 0x 0px;
+}
+
+.collection-text {
+  font-family:'Roboto Slab', sans-serif;
+  text-align: center;
+  font-size: 25px;
+  padding: 20px 0 0 10px;
+}
+
+.highlight {
+  color: var(--darker-brown) !important;
+}
+
+/* Banner styling */
+.banner {
+  background-color: var(--light-cream);
+  background-image: url(assets/img/divider.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px 0;
+  text-align: center; 
+  margin-bottom: 20px; 
+  position: fixed; /* fixes the banner to the bottom of the screen */
+  bottom: 0; /* positions the banner at the very bottom */
+  width: 100%; /* makes the banner span the full width of the screen */
+  z-index: 9999; /* makes sure this is the top layer */
+}
+
+.banner h2 {
+  font-size: 20px;
+  color: #3e2f12; 
+  font-family: 'Roboto Slab', sans-serif;
+  padding: 5px 20px;
+  display: inline-block;
+  border: 2px solid black;
+  background-color: var(--light-cream);
+}
+
+.banner p {
+  font-size: 20px;
+  color: #ffffff; 
+  font-family: 'Roboto Slab', sans-serif;
+  padding: 6px 21px; 
+  display: inline-block;
+  background-color: var(--darker-brown);
+
+}
+.banner p strong{
+  color: var(--light-brown);
+}
+
+/* responsive for banner */
+@media (max-width: 768px) {
+  .banner {
+      padding: 15px 0;
+  }
+
+  .banner h2 {
+      font-size: 18px; 
+      margin-bottom: 5px;
+  }
+  .banner p {
+      font-size: 16px;
+}
+}
+
+@media (max-width: 480px) {
+  .banner {
+     padding: 5px 0;
+  }
+  .banner h2 {
+    font-size: 16px;
+  }
+  .banner p{
+    font-size: 14px;
+  }
+}
+
+/* makes selection a pretty colour, for style points SOME SORT OF INTERACTION DELIVERABLE*/
+::selection {
+    background: #ffeb99; 
+}
+
+/*PRODUCT SECTION*/
+
+.product-listing {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* formats the display grid into 4 equal columns */
+  gap: 20px; /* spaces inbetween */
+  padding: 20px 20px; 
+}
+
+.product {
+  background-color: #f3f3f3; 
+  padding: 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: column; /* combos with display flex to put things vertical */
+}
+
+.product-img-wrapper {
+  display: flex;
+  justify-content: center; 
+  width: 100%; /* makes wrapper the full width of container */
+  margin-bottom: 10px; 
+  background-color: white;
+}
+
+ .product img {
+    width: 100%;
+    max-width: 200px; /* sets max width of the image so they dont infinitely scale with the screen */
+    height: auto; 
+}
+
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+.price-black {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+
+.on-sale { /* gives the red highlight behind promotion text*/
+  background-color: red;
+  color: white;
+  padding: 2px 6px; 
+  border-radius: 3px; 
+  font-size: 14px; 
+  font-weight: bold;
+}
+
+.description {
+  font-size: 14px;
+  color: #575757;
+  font-family: 'Roboto Slab', sans-serif;
+  margin-bottom: 15px;
+}
+
+.discount { 
+  color: red; 
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Roboto Slab', sans-serif;
+  margin-bottom: 15px;
+}
+
+/* Buttons container with 2 buttons */
+.buttons {
+  display: flex;
+  flex-direction: column; /* combos with display flex to make buttons stack */
+  gap: 10px; /* space inbetween buttons */
+}
+
+/* add to cart button */
+.shop-now{
+  background-color: #3ca400; /* harvey norman add to cart button colour */
+  color: white;
+  padding: 10px 15px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 13px;
+  font-weight: medium;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none; /* removes underline from links */
+  display: inline-block;
+  cursor: pointer;/*makes cursor pointer */
+  transition: background-color 0.2s ease;
+}
+
+.shop-now:hover { /*hover interactivity*/
+  background-color: #338b00; /* harvey norman hover colour */
+}
+
+
+.find-store {
+  background-color: #dcdcdc;
+  color: #1a1a1a;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 13px;
+  font-weight: medium;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none; 
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.find-store:hover {
+  background-color: #c1c1c1; 
+  border: 2px solid rgb(100, 100, 100); /*harvey norman had a border when hovered so i added one*/
+}
+
+@media (max-width: 768px) {
+  .product-listing {
+      grid-template-columns: repeat(2, 1fr); /*makes products go from 4 to 2 colomns */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-listing {
+      grid-template-columns: 1fr; /* then 2 to 1 */
+  }
+}
+
+
+
+/* DIVIDER SECTION */
+
+.divider {
+  display: flex; 
+  align-items: center;
+  justify-content: center; /* display flex combo (never forget)*/
+  margin: 5px 0;
+}
+
+.line {
+  height: 3px;
+  background-color: #383838;
+  flex-grow: 1; /* LETS THE LINE GROW AND BE AUTOMATICALLY RESPONSIVE */
+  margin: 0 50px;
+}
+
+.show-more { /*copied button css*/
+  background-color: var(--coffee-brown); 
+  color: white;
+  padding: 10px 20px;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 13px;
+  font-weight: medium;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none; 
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.show-more:hover {
+  background-color: var(--darker-brown);
+}
+
+
+/*feeling overwhelmed? me rn at 1045pm saturday 31st ૮₍ ´• ˕ •` ₎ა */
+
+.helpful-section {
+  display: flex; /* flex combo again, adjust content*/
+  align-items: center;
+  justify-content: space-between; /*puts the text container and img on opposite sides*/
+  max-width: 1200px;  /*max width of content (same as brands sect)*/
+  margin: 20px auto ; 
+  padding: 20px; 
+}
+
+.vibe-check-textcontainer {
+  color: white; 
+  max-width: 50%;
+  height: auto;
+  padding: 20px 80px 80px auto;
+}
+
+.feeling {
+  font-size: 60px;
+  font-family: 'Roboto Slab', sans-serif;
+  font: bolder;
+  margin: 0px 0 10px 0;
+  color: var(--darker-brown);
+}
+
+.overwhelmed {
+  font-size: 50px;
+  font-family: 'Roboto Slab', sans-serif;
+  font: bolder;
+  color: var(--long-black);
+  margin: -10px 0 10px 0;
+}
+
+.subtext {
+  font-size: 21px; 
+  font-family: 'Roboto Slab', sans-serif;
+  min-width: 50%;
+  color: #252525;
+  margin-bottom: 20px;
+}
+
+.barista-img {
+  max-width: 50%; /* stops image infinite scaling at bigger screens*/
+  display: flex; 
+  justify-content: center;
+}
+
+.barista-img img {
+  width: 90%; /*responsive to container*/
+  height: auto;
+}
+
+.question-mark-colour {
+  color:var(--light-brown);
+}
+/*there must be a better way to do this, but i am too tired, forgive me*/
+
+@media (max-width: 768px) {
+  .feeling {
+    font-size: 40px;
+    font-family: 'Roboto Slab' sans-serif;
+    margin: 0 0 10px 0;
+  }
+  
+  .overwhelmed {
+    font-size: 30px;
+    font-family: 'Roboto Slab' sans-serif;
+    margin: 0 0 10px 0;
+  }
+  
+  .subtext {
+    font-size: 18px; 
+    font-family: 'Roboto Slab' sans-serif;
+  }
+}
+
+@media (max-width: 480px) {
+  .feeling {
+      font-size: 30px;
+      font-family: 'Roboto Slab' sans-serif;
+      margin: 0 0 10px 0;
+  }
+    
+  .overwhelmed {
+      font-size: 24px;
+      font-family: 'Roboto Slab' sans-serif;
+      margin: 0 0 10px 0;
+  }
+    
+    .subtext {
+      font-size: 12px; 
+      font-family: 'Roboto Slab' sans-serif;
+    }
+  }
+
+  .locate-store { /*copied button css*/
+    background-color: var(--coffee-brown); 
+    color: white;
+    padding: 40px 100px;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 13px;
+    font-weight: medium;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none; 
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .locate-store:hover {
+    background-color: var(--darker-brown);
+  }
+  
+
+  .massive-range-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%; 
+    cursor: pointer;
+  }
+
+.responsive-banner {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  max-height: 80%; 
+}
+
+
+.footerspace {
+  margin-top: 100px;
+  background-color: white;
+}
+
+.copyright {
+  text-align: center;
+  font-family: 'Roboto Slab' sans-serif;
+  font-size: 14px;
+  color: white;
+  background-color: var(--long-black);
+  padding:2px;
+}

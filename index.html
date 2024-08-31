@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+    <title>Coffee Weekend - Dave Fu</title>
+  </head>
+  <!-- container box for the main coffee weekend responsive banner - also where harvey norman navigation would go-->
+
+
+    <header>
+        <nav>
+            <!--insert harvey norman navigation-->
+        </nav>
+        <div class="header-container">
+            <img src="assets/img/coffee weekend.png" alt="Header Image" class="header-image" loading="eager"> 
+        </div>
+    </header>
+
+    <!--container box for all the brands-->
+    <section class="brands-section">
+        <div class="brands-container">
+                <div class="brand-wrapper">
+                <img src="assets/img/Logos/breville.png" alt="breville" class="brand-logo">
+            </div>
+            <div class="brand-wrapper">  
+                <img src="assets/img/Logos/delonghi.png" alt="delonghi" class="brand-logo">
+            </div>
+            <div class="brand-wrapper">
+                <img src="assets/img/Logos/jura.png" alt="jura" class="brand-logo">
+            </div>
+            <div class="brand-wrapper">
+                <img src="assets/img/Logos/nespresso.png" alt="nespresso" class="brand-logo">
+            </div>
+            <div class="brand-wrapper">
+                    <img src="assets/img/Logos/saeco.png" alt="saeco" class="brand-logo">
+                </div>
+            <div class="brand-wrapper">
+                        <img src="assets/img/Logos/smeg.png" alt="smeg" class="brand-logo">
+                    </div>
+        </div>
+    </section>
+<!-- main section with all the harvey norman content, good semantics :) -->
+    <main>
+
+<!-- Offer 1 Deliverable 
+ Bonus 1kg Bag of coffee beans with every machine purchased CTA: Find out more
+ i didnt like the Find out more CTA cause the user is already on the landing page, its pre self explanatory
+ I added a bonus 1kg bag of coffee beans under each product listing-->
+
+
+       <div class="banner"> 
+            <h2><em><strong>Special Offer!</strong></em></h2>
+            <p> Get a <strong>complimentary</strong> 1kg bag of coffee beans with every machine!</p>
+        </div> <!--needs a close button but thats js, im not touching js yet already way in over my head-->
+
+
+        
+<!-- Offers 2 & 3 Deliverables 
+ 50% off Saeco GranBaristo Automatic Espresso Machine $1500 CTA: Add to cart.
+ DeLonghi Nespresso Lattissima Plus Coffee Machine only $499 CTA: Add to cart.
+ -->
+
+<!--trying to copy harvey normans product listing design, i think i did alright
+i referenced this guy https://codepen.io/aaronbarnard/pen/oeWvJo -->
+        <section class="main-content-section">
+            <h1 class="collection-text"><em><strong class="highlight">Weekend Sale </strong>on Coffee Machines with extra Freebies!</em></h1>
+            <div class="product-listing">
+                <div class="product">
+                    <div class="product-img-wrapper">
+                    <img src="assets/img/saeco auto.png" alt="Saeco 1">
+                    </div>
+                    <p class="price">$1500   <strong class="on-sale">50% OFF</strong></p>
+                    <p class="description">Saeco GranBaristo Automatic Espresso Machine</p>
+                    <p class="discount"> Bonus 1kg Bag of Coffee Beans </p>
+                    <div class="buttons">
+                        <a href="https://www.harveynorman.com.au/checkout/cart" class="shop-now">+ Add to Cart</a>
+                        <a href="https://stores.harveynorman.com.au/" class="find-store">Find in Store</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img-wrapper">
+                        <img src="assets/img/lattissima.png" alt="Lattisma 1">
+                        </div>
+                    <p class="price-black">$499   <strong class="on-sale">BONUS</strong></p>
+                    <p class="description">DeLonghi Nespresso Lattissima Plus Coffee Machine</p>
+                    <p class="discount"> Bonus 1kg Bag of Coffee Beans </p>
+                    <div class="buttons">
+                        <a href="https://www.harveynorman.com.au/checkout/cart" class="shop-now">+ Add to Cart</a>
+                        <a href="https://stores.harveynorman.com.au/" class="find-store">Find in Store</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img-wrapper">
+                        <img src="assets/img/saeco auto.png" alt="Saeco 2">
+                        </div>
+                        <p class="price">$1500   <strong class="on-sale">50% OFF</strong></p>
+                        <p class="description">Saeco GranBaristo Automatic Espresso Machine</p>
+                        <p class="discount"> Bonus 1kg Bag of Coffee Beans </p>
+                        <div class="buttons">
+                            <a href="https://www.harveynorman.com.au/checkout/cart" class="shop-now">+ Add to Cart</a>
+                            <a href="https://stores.harveynorman.com.au/" class="find-store">Find in Store</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img-wrapper">
+                        <img src="assets/img/lattissima.png" alt="Lattisma 2">
+                        </div>
+                    <p class="price-black">$499   <strong class="on-sale">BONUS</strong></p>
+                    <p class="description">DeLonghi Nespresso Lattissima Plus Coffee Machine</p>
+                    <p class="discount"> Bonus 1kg Bag of Coffee Beans </p>
+                    <div class="buttons">
+                        <a href="https://www.harveynorman.com.au/checkout/cart" class="shop-now">+ Add to Cart</a>
+                        <a href="https://stores.harveynorman.com.au/" class="find-store">Find in Store</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider">
+                <div class="line"></div>
+                <a href="https://www.harveynorman.com.au/kitchen-appliances/coffee-beverage/coffee-machines" class="show-more">Show More</a>
+                <div class="line"></div>
+            </div>
+        </section>
+
+        <!-- Feeling overwhelmed section to help those who are geniunely lost with all the different coffee machines and prefer to shop in-person help
+          Section invites ppl to come to stores - see Primary Market Objective: Increase sales of coffee machines in BOTH online and in-store  -->
+       
+       <!-- also different medias promotes discovery, idk the study behind it, but in my experience i prefer content being broken up and no just infinite scrolling a catalogue or a huge block text -->
+
+         <section class="helpful-section">
+            <div class="vibe-check-textcontainer">
+                <h2 class="feeling">Feeling </h2>
+                <h2 class="overwhelmed">Overwhelmed<strong class="question-mark-colour">?</strong></h2>
+                <p class="subtext"><b><em>Come visit us in store ~</em></b>  Barista trained specialists giving live demonstrations and advice on store grounds.</p>
+                <a href="https://stores.harveynorman.com.au/" class="show-more">Locate a Store</a>
+            </div>
+            <div class="barista-img">
+                <img src="assets/img/baristas.png" alt="trained baristas">
+            </div>
+        </section>
+
+        <section class="massive-range-banner">
+            <a href="https://www.harveynorman.com.au/kitchen-appliances/coffee-beverage/coffee-machines">
+                <img src="assets/img/massive range2.png" alt="Massive Range Banner" class="responsive-banner">
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footerspace">
+        <!--insert harvey norman footer with all the links and the 2024 paris olympics banner-->
+        </div>
+        <h2 class="copyright">©2024 Designed by Dave Fu. All Rights Reserved</h2>
+    </footer>
+<!-- if you havent already, try selecting some stuff, i changed the selection colour to yellow, my personal branding colour -->
+</html>
+
+<!--   Finally finished  ٩(ˊᗜˋ*)و  
+Wednesday - caught the flu, productivity dropped, re-learning html and css using theodinproject and youtube, understanding enough to get started
+Thursday - LOTS of failing, getting stuck, could not get page to be responsive, used inspect on live websites, tried using page templates but none of that helped because i didnt understand the code 
+           took a step back and changed my approach, drawing out each section visually as boxes, and writing code on paper, figured out the lego pieces and just coding everything from scratch - got header section finished, functional
+Friday - Went to work doing host things, feeling better from the flu - knocked out the brand section and planned out the rest of the page with the DISPLAY FLEX COMBO in mind
+Saturday - DID REST OF THE CODE... ALL OF IT - i worked from 10am to 1:37am - synapses fried - but really proud of what i made, the project has shot way beyond what i envisioned i'd be achieving, hopefully has met your standards.
+-->
